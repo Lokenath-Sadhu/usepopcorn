@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export function useMovies(query, callback) {
+export function useMovies(query) {
   const KEY = "f84fc31d";
   const [movies, setMovies] = useState([]);
 
@@ -9,7 +9,7 @@ export function useMovies(query, callback) {
 
   useEffect(
     function () {
-      callback?.();
+      //callback?.();
       const controller = new AbortController();
 
       async function fetchMovies() {
